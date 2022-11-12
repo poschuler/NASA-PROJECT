@@ -1,15 +1,16 @@
 name: NASA Project CI
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 jobs:
   build:
     env:
       CI: true
-    strategy: 
-      matrix: node-version: [18.x, 16.x, 14.x]
+    strategy:
+      matrix:
+        node-version: [18.x, 16.x, 14.x]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
